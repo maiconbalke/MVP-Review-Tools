@@ -1,0 +1,9 @@
+{
+  "jobId": "709f30ec-d652-4e0c-b505-e1e5cb421039",
+  "createdAt": "2026-02-25T19:18:09.423Z",
+  "body": {
+    "uploadPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\uploads\\709f30ec-d652-4e0c-b505-e1e5cb421039.zip"
+  },
+  "status": "queued",
+  "policyProfile": "strict"
+}

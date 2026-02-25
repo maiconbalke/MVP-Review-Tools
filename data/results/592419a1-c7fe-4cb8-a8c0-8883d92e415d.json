@@ -1,0 +1,25 @@
+{
+  "jobId": "592419a1-c7fe-4cb8-a8c0-8883d92e415d",
+  "processedAt": "2026-02-24T23:33:59.811Z",
+  "input": {
+    "uploadPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\uploads\\592419a1-c7fe-4cb8-a8c0-8883d92e415d.zip"
+  },
+  "repoPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\work\\592419a1-c7fe-4cb8-a8c0-8883d92e415d\\repo",
+  "findings": [
+    {
+      "ruleId": "R001",
+      "severity": "low",
+      "message": "No package.json found."
+    },
+    {
+      "ruleId": "R002",
+      "severity": "info",
+      "message": "No TypeScript configuration detected."
+    },
+    {
+      "ruleId": "R003",
+      "severity": "info",
+      "message": "No Dockerfile detected."
+    }
+  ]
+}

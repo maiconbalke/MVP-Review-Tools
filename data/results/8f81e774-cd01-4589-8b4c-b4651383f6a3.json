@@ -1,0 +1,14 @@
+{
+  "jobId": "8f81e774-cd01-4589-8b4c-b4651383f6a3",
+  "processedAt": "2026-02-24T19:49:51.649Z",
+  "input": {
+    "repoUrl": "https://github.com/maiconbalke/Liberta-social"
+  },
+  "findings": [
+    {
+      "ruleId": "R001",
+      "severity": "info",
+      "message": "Worker processed job successfully (placeholder)."
+    }
+  ]
+}

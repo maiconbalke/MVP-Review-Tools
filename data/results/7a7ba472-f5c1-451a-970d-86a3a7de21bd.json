@@ -1,0 +1,14 @@
+{
+  "jobId": "7a7ba472-f5c1-451a-970d-86a3a7de21bd",
+  "processedAt": "2026-02-24T16:57:03.484Z",
+  "input": {
+    "repoUrl": "test"
+  },
+  "findings": [
+    {
+      "ruleId": "R001",
+      "severity": "info",
+      "message": "Worker processed job successfully (placeholder)."
+    }
+  ]
+}

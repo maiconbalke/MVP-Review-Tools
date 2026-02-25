@@ -1,0 +1,8 @@
+{
+  "jobId": "7a7ba472-f5c1-451a-970d-86a3a7de21bd",
+  "createdAt": "2026-02-24T16:41:37.826Z",
+  "body": {
+    "repoUrl": "test"
+  },
+  "status": "queued"
+}

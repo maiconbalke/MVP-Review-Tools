@@ -1,0 +1,47 @@
+{
+  "jobId": "709f30ec-d652-4e0c-b505-e1e5cb421039",
+  "processedAt": "2026-02-25T19:18:10.487Z",
+  "input": {
+    "uploadPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\uploads\\709f30ec-d652-4e0c-b505-e1e5cb421039.zip"
+  },
+  "repoPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\work\\709f30ec-d652-4e0c-b505-e1e5cb421039\\repo",
+  "findings": [
+    {
+      "ruleId": "R003",
+      "severity": "info",
+      "message": "Missing Dockerfile",
+      "recommendation": "Adicione um Dockerfile para containerizar a aplicação.",
+      "category": "docker"
+    },
+    {
+      "ruleId": "R011",
+      "severity": "low",
+      "message": "Arquivo LICENSE ausente.",
+      "recommendation": "Adicione um arquivo LICENSE para definir a licença do projeto.",
+      "category": "governance"
+    },
+    {
+      "ruleId": "R012",
+      "severity": "medium",
+      "message": "Configuração de CI não encontrada.",
+      "recommendation": "Configure integração contínua usando GitHub Actions ou outra ferramenta de CI.",
+      "category": "ci-cd"
+    },
+    {
+      "ruleId": "R013",
+      "severity": "high",
+      "message": "Arquivo .env versionado no repositório.",
+      "recommendation": "Remova o arquivo .env do versionamento e utilize variáveis de ambiente seguras.",
+      "category": "security"
+    }
+  ],
+  "score": 0,
+  "grade": "F",
+  "summary": {
+    "info": 1,
+    "low": 1,
+    "medium": 1,
+    "high": 1,
+    "total": 4
+  }
+}

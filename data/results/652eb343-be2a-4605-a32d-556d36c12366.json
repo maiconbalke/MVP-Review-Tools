@@ -1,0 +1,15 @@
+{
+  "jobId": "652eb343-be2a-4605-a32d-556d36c12366",
+  "processedAt": "2026-02-24T22:48:41.951Z",
+  "input": {
+    "uploadPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\uploads\\652eb343-be2a-4605-a32d-556d36c12366.zip"
+  },
+  "repoPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\work\\652eb343-be2a-4605-a32d-556d36c12366\\repo",
+  "findings": [
+    {
+      "ruleId": "R001",
+      "severity": "info",
+      "message": "ZIP extracted successfully (placeholder analysis)."
+    }
+  ]
+}

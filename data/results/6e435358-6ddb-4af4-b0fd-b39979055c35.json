@@ -1,0 +1,14 @@
+{
+  "jobId": "6e435358-6ddb-4af4-b0fd-b39979055c35",
+  "processedAt": "2026-02-24T16:20:04.562Z",
+  "input": {
+    "repoUrl": "https://github.com/test/test"
+  },
+  "findings": [
+    {
+      "ruleId": "R001",
+      "severity": "info",
+      "message": "Worker processed job successfully (placeholder)."
+    }
+  ]
+}

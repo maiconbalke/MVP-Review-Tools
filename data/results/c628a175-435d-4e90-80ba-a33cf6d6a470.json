@@ -1,0 +1,31 @@
+{
+  "jobId": "c628a175-435d-4e90-80ba-a33cf6d6a470",
+  "processedAt": "2026-02-25T15:47:27.656Z",
+  "input": {
+    "uploadPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\uploads\\c628a175-435d-4e90-80ba-a33cf6d6a470.zip"
+  },
+  "repoPath": "C:\\Users\\maico\\OneDrive\\Documentos\\dev\\Review-Tools\\data\\work\\c628a175-435d-4e90-80ba-a33cf6d6a470\\repo",
+  "findings": [
+    {
+      "ruleId": "R001",
+      "severity": "low",
+      "message": "Missing package.json file",
+      "recommendation": "Ensure package.json is committed if this is a Node.js project.",
+      "category": "nodejs"
+    },
+    {
+      "ruleId": "R002",
+      "severity": "info",
+      "message": "Missing tsconfig.json file",
+      "recommendation": "Ensure tsconfig.json is committed if this is a TypeScript project.",
+      "category": "typescript"
+    },
+    {
+      "ruleId": "R003",
+      "severity": "info",
+      "message": "Missing Dockerfile",
+      "recommendation": "Add a Dockerfile to containerize the application.",
+      "category": "docker"
+    }
+  ]
+}

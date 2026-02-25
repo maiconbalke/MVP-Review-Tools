@@ -1,0 +1,8 @@
+{
+  "jobId": "6e435358-6ddb-4af4-b0fd-b39979055c35",
+  "createdAt": "2026-02-24T15:20:54.994Z",
+  "body": {
+    "repoUrl": "https://github.com/test/test"
+  },
+  "status": "queued"
+}

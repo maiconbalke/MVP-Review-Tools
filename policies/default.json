@@ -1,0 +1,30 @@
+{
+    "severityPenalties": {
+        "info": 0,
+        "low": 5,
+        "medium": 15,
+        "high": 30
+    },
+    "categoryMultipliers": {
+        "security": 2.0,
+        "ci-cd": 1.2,
+        "repository-hygiene": 1.2,
+        "governance": 1.0,
+        "documentation": 0.8,
+        "dependencies": 1.0
+    },
+    "ruleOverrides": {
+        "disabledRules": [
+            "R024"
+        ],
+        "severityByRuleId": {}
+    },
+    "gradeThresholds": {
+        "A": 90,
+        "B": 80,
+        "C": 70,
+        "D": 60,
+        "E": 50,
+        "F": 0
+    }
+}

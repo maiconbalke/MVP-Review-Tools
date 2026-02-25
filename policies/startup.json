@@ -1,0 +1,11 @@
+{
+    "severityPenalties": {
+        "info": 0,
+        "low": 5,
+        "medium": 10,
+        "high": 20
+    },
+    "categoryMultipliers": {
+        "security": 1.0
+    }
+}
