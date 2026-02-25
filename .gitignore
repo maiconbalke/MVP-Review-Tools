@@ -50,3 +50,8 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# =========================
+# Application Data
+# =========================
+data/
