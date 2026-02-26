@@ -5,7 +5,8 @@ import {
     readFileSync,
     renameSync,
     writeFileSync,
-    createReadStream
+    createReadStream,
+    statSync
 } from "fs";
 import { join } from "path";
 import * as unzipper from "unzipper";
@@ -71,11 +72,20 @@ async function processJob(jobPath: string, file: string) {
     console.log(`[worker] start policyProfile=${policyProfile} jobId=${jobId}`);
 
     const body = job.body ?? {};
-    const repoDir = join(WORK_DIR, jobId, "repo");
+    let repoDir = join(WORK_DIR, jobId, "repo");
 
     if (body.uploadPath) {
         // console.log(`[worker] extracting zip ${body.uploadPath}`);
         await extractZip(body.uploadPath, repoDir);
+
+        // Handle root wrapper directory (e.g. from GitHub .zip downloads)
+        const entries = readdirSync(repoDir);
+        if (entries.length === 1) {
+            const innerPath = join(repoDir, entries[0]);
+            if (statSync(innerPath).isDirectory()) {
+                repoDir = innerPath; // Point analysis inside the wrapper folder
+            }
+        }
     }
 
     const ctx = {
