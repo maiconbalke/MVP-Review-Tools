@@ -9,7 +9,7 @@ import {
     statSync
 } from "fs";
 import { join } from "path";
-import * as unzipper from "unzipper";
+import extract from "extract-zip";
 import { rules } from "@review-tools/rules";
 import { Finding } from "@review-tools/shared";
 import { loadPolicy } from "./policy.js";
@@ -45,13 +45,7 @@ type Job = {
 
 async function extractZip(zipPath: string, destDir: string) {
     if (!existsSync(destDir)) mkdirSync(destDir, { recursive: true });
-
-    await new Promise<void>((resolve, reject) => {
-        createReadStream(zipPath)
-            .pipe(unzipper.Extract({ path: destDir }))
-            .on("close", () => resolve())
-            .on("error", reject);
-    });
+    await extract(zipPath, { dir: destDir });
 }
 
 async function processJob(jobPath: string, file: string) {
@@ -199,8 +193,9 @@ async function main() {
 
         try {
             await processJob(processing, file);
-        } catch (err) {
+        } catch (err: any) {
             console.error("[worker] error", err);
+            try { writeFileSync(join(ROOT_DIR, "data", "error.log"), String(err?.stack || err), "utf-8"); } catch (e) { }
             // Move back to queue or error...
             try {
                 const r = readFileSync(processing, "utf-8");

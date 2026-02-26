@@ -14,11 +14,11 @@
     "dependencies": {
         "@review-tools/rules": "1.0.0",
         "@review-tools/shared": "1.0.0",
-        "unzipper": "^0.12.3"
+        "extract-zip": "^2.0.1"
     },
     "devDependencies": {
+        "@types/extract-zip": "^2.0.0",
         "@types/node": "^20.11.24",
-        "@types/unzipper": "^0.10.11",
         "tsx": "^4.7.1",
         "typescript": "^5.3.3"
     }
