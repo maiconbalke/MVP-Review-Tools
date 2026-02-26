@@ -34,3 +34,6 @@ ENV NODE_ENV=production
 
 # Expõe a porta que a API usa
 EXPOSE 3001
+
+# Inicia a API e o Worker simultaneamente
+CMD ["npm", "start"]
