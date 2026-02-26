@@ -18,9 +18,10 @@ RUN npm ci
 # Copia todo o código-fonte restante
 COPY . .
 
-# Faz o build de todos os projetos (Shared, Rules, API, Worker, Web)
-RUN npm run build --workspaces --if-present
-
+# Faz o build na ordem correta devido a dependências entre pacotes
+RUN npm --workspace packages/shared run build && \
+    npm --workspace packages/rules run build && \
+    npm run build --workspaces --if-present
 # --- Estágio de Produção ---
 FROM node:20-alpine AS runner
 
