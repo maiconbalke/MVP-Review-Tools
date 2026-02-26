@@ -81,6 +81,8 @@ function App() {
     loadRecentJobs();
   }, []);
 
+  const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:3001';
+
   const handleAnalyze = async () => {
     if (!repoUrl.trim() && !file) return;
 
@@ -100,12 +102,12 @@ function App() {
       if (file) {
         const formData = new FormData();
         formData.append('file', file);
-        response = await fetch(`http://127.0.0.1:3001/analyze/upload?policy=${policyProfile}`, {
+        response = await fetch(`${API_URL}/analyze/upload?policy=${policyProfile}`, {
           method: 'POST',
           body: formData,
         });
       } else {
-        response = await fetch(`http://127.0.0.1:3001/analyze?policy=${policyProfile}`, {
+        response = await fetch(`${API_URL}/analyze?policy=${policyProfile}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -145,7 +147,7 @@ function App() {
       if (!jobId || status === 'done' || status === 'error') return;
 
       try {
-        const response = await fetch(`http://127.0.0.1:3001/jobs/${jobId}/status`);
+        const response = await fetch(`${API_URL}/jobs/${jobId}/status`);
         if (!response.ok) {
           throw new Error('Falha ao checar status');
         }
@@ -178,7 +180,7 @@ function App() {
 
     const fetchFindings = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:3001/jobs/${jobId}`);
+        const response = await fetch(`${API_URL}/jobs/${jobId}`);
         if (!response.ok) {
           throw new Error('Falha ao buscar resultados');
         }
@@ -392,7 +394,7 @@ function App() {
                   <button onClick={() => navigator.clipboard.writeText(jobId)} style={{ cursor: 'pointer', padding: '4px 8px', fontSize: '0.8rem', borderRadius: '4px', border: '1px solid #ccc', backgroundColor: '#fff' }}>Copiar Job ID</button>
                 </p>
                 {hasResult && (
-                  <a href={`http://127.0.0.1:3001/jobs/${jobId}`} target="_blank" rel="noreferrer" style={{ fontSize: '0.9rem', color: '#007bff', textDecoration: 'none', fontWeight: 'bold' }}>Abrir JSON do resultado</a>
+                  <a href={`${API_URL}/jobs/${jobId}`} target="_blank" rel="noreferrer" style={{ fontSize: '0.9rem', color: '#007bff', textDecoration: 'none', fontWeight: 'bold' }}>Abrir JSON do resultado</a>
                 )}
               </div>
               <p style={{ margin: '0 0 10px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
